@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>The Wedding of Hilalby & Fitria</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "gold-soft": "#B89B7A",
+            "gold-dark": "#79634F",
+            "coffee-deep": "#44382F",
+            "warm-beige": "#E9DFD0",
+            "paper-cream": "#F8F5EF",
+            "primary": "#725a3d",
+            "surface": "#F8F5EF",
+            "on-surface": "#44382F"
+          },
+          fontFamily: {
+            cormorant: ["Cormorant Garamond", "serif"],
+            poppins: ["Poppins", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+    }
+    .arch-frame {
+      border-top-left-radius: 9999px;
+      border-top-right-radius: 9999px;
+    }
+    .texture-bg {
+      background-color: #F8F5EF;
+      background-image: radial-gradient(rgba(184, 155, 122, 0.08) 1px, transparent 0);
+      background-size: 20px 20px;
+    }
+
+    /* Setelah undangan dibuka: semua link & tombol tidak bisa diklik */
+    body.invitation-locked a,
+    body.invitation-locked button {
+      pointer-events: none;
+      cursor: default;
+    }
+  </style>
+</head>
+<body class="bg-[#e5e2dc]/40 text-[#44382F] antialiased overflow-x-hidden selection:bg-[#B89B7A] selection:text-white font-poppins">
+
+<div class="min-h-screen w-full flex justify-center">
+  <main class="w-full max-w-[480px] min-h-screen bg-[#F8F5EF] relative shadow-2xl overflow-x-hidden flex flex-col texture-bg">
+
+    <!-- PAGE 1: COVER SCREEN -->
+    <section id="cover-screen" class="relative z-40 w-full h-[100dvh] bg-[#F8F5EF] flex flex-col justify-between items-center px-5 py-6 border-b border-[#E9DFD0]">
+      <div class="text-center pt-2">
+        <p class="font-poppins text-[10px] tracking-[0.25em] text-[#79634F] uppercase font-semibold">Walimatul 'Ursy</p>
+        <div class="w-8 h-[1px] bg-[#B89B7A]/60 mx-auto mt-1"></div>
+      </div>
+
+      <div class="relative w-full max-w-[220px] aspect-[4/5] mx-auto my-auto">
+        <div class="absolute -inset-1.5 arch-frame border border-[#B89B7A]/40 pointer-events-none"></div>
+        <div class="w-full h-full arch-frame overflow-hidden shadow-lg border-2 border-white">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9uYg0aKmgWKoCw9m_e_YiPAMN5hJvwb91QqrpClGRSYtTkeR-QqsZV8GZtKTstUbFI-ENW-5XS3dMXlZjrqUdH0mCwAETfBW-dd4JgzB-fV2nHYyZBaN4M3jYHXTdojQkENPoMSiDGcV2Oh-v0pLuvHafbhwxKOu5OuG5fx38A9RVL_-0hVGBv08s6LkzG7xg7t2j5KJa8J52f5jjBbduEAj1swRg9uJMoFALBMNv" alt="Hilalby & Fitria" class="w-full h-full object-cover object-top">
+        </div>
+        <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white border border-[#B89B7A]/50 rounded-full px-3 py-0.5 shadow-sm flex items-center space-x-1 whitespace-nowrap">
+          <span class="material-symbols-outlined text-[#B89B7A] text-xs" style="font-variation-settings: 'FILL' 1;">favorite</span>
+          <span class="font-poppins text-[9px] tracking-widest text-[#79634F] font-semibold">28 . 06 . 2025</span>
+        </div>
+      </div>
+
+      <div class="w-full text-center space-y-3 pb-1">
+        <div class="space-y-0.5">
+          <p class="font-cormorant italic text-base text-[#79634F]">The Wedding of</p>
+          <h1 class="font-cormorant text-3xl font-normal text-[#44382F]">Hilalby & Fitria</h1>
+        </div>
+
+        <div class="bg-white/95 border border-[#B89B7A]/30 rounded-xl p-3 shadow-sm mx-2">
+          <p class="font-poppins text-[10px] text-[#79634F] uppercase tracking-wider font-semibold mb-0.5">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+          <h2 class="font-cormorant text-xl text-[#44382F] font-semibold">Tamu Undangan</h2>
+        </div>
+
+        <button id="btn-open-invitation" type="button" class="w-full max-w-[240px] mx-auto py-3 px-5 bg-[#B89B7A] hover:bg-[#a68969] text-white rounded-full shadow-md font-poppins text-xs font-semibold tracking-widest uppercase flex items-center justify-center space-x-2 transition-transform active:scale-95">
+          <span class="material-symbols-outlined text-sm">drafts</span>
+          <span>Buka Undangan</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 2: MAIN INVITATION CONTENT (HIDDEN INITIAL) -->
+    <div id="unlocked-content" class="hidden w-full pb-24 opacity-0 transition-opacity duration-700">
+      
+      <!-- Salam & Ayat -->
+      <section id="salam" class="px-6 py-10 text-center flex flex-col items-center bg-[#F8F5EF] scroll-mt-6">
+        <p class="font-cormorant text-xl text-[#79634F] mb-1">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+        <p class="font-poppins text-[10px] tracking-[0.15em] text-[#B89B7A] uppercase font-semibold mb-4">Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
+        <p class="font-poppins text-xs text-[#79634F] max-w-[320px] leading-relaxed mb-6">
+          Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i pada pernikahan putra-putri kami:
+        </p>
+        <div class="bg-white border border-[#B89B7A]/30 rounded-2xl p-5 shadow-sm max-w-[360px] mx-auto text-center space-y-2">
+          <p class="font-cormorant italic text-sm text-[#44382F] leading-relaxed">
+            "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri..."
+          </p>
+          <p class="font-poppins text-[10px] tracking-widest text-[#B89B7A] font-semibold uppercase">QS. Ar-Rum: 21</p>
+        </div>
+      </section>
+
+      <!-- Mempelai -->
+      <section id="couple" class="px-5 py-10 bg-white/70 border-t border-b border-[#E9DFD0] scroll-mt-6">
+        <div class="text-center mb-6">
+          <span class="material-symbols-outlined text-[#B89B7A] text-lg mb-0.5" style="font-variation-settings: 'FILL' 1;">favorite</span>
+          <h2 class="font-cormorant text-2xl text-[#44382F]">Kedua Mempelai</h2>
+        </div>
+
+        <!-- Groom -->
+        <div class="bg-white rounded-2xl border border-[#B89B7A]/30 p-5 shadow-sm mb-5 text-center flex flex-col items-center">
+          <div class="relative w-32 h-40 arch-frame p-1 border-2 border-[#B89B7A]/50 mb-3 bg-white">
+            <div class="w-full h-full arch-frame overflow-hidden">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXU53huSlEAf6kespywslHaUrf_AQdTdzhSApGdBIRzh72idl0V_FVImZVIp-R7tUrOtoIAeUmtRG5DxJ7ECb9l8mroObEKN5Ne3yWRnqHPNnFO54UcoYoJwJqPSSaaBK01x-NNTG9nSkiwHd41p80qYfFMOeoYsmxXthqvheHXlkb88Xo1Ynxr_1XyH2ZaZviQdv4P0Z43q-ohtWKHnyu0JpyPVrqw_hT2Li0yDBI" alt="Hilalby" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <h3 class="font-cormorant text-xl font-bold text-[#44382F]">Hilalby </h3>
+          <p class="font-poppins text-[11px] text-[#79634F] mt-1">
+            Putra dari Bpk. Prakoso & Ibu. Sekar
+          </p>
+        </div>
+
+        <div class="text-center my-2 font-cormorant italic text-2xl text-[#B89B7A]">&amp;</div>
+
+        <!-- Bride -->
+        <div class="bg-white rounded-2xl border border-[#B89B7A]/30 p-5 shadow-sm text-center flex flex-col items-center">
+          <div class="relative w-32 h-40 arch-frame p-1 border-2 border-[#B89B7A]/50 mb-3 bg-white">
+            <div class="w-full h-full arch-frame overflow-hidden">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuALrYioPtwC37nmMXYADF9Sc7I6tH8YLK5n6WvCxqjIzpWQt785oUhnZbuzFFFn-ylr2af7c67YFqBmzYdZ_hXZWuNadLLqrQk3b3z_ZHY0qlb3pHvl2xJsYjszr5-mhs_0dIOTpUeR1G_z5Zhr7itzfIlj_va5Gp4MA2nbKI8XmY24GKkpJpLYtxb9zlcFe1REDbcPq2agw1ehOnllIdPgy1l5h-Pk-prnF2RuotwD" alt="Fitria" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <h3 class="font-cormorant text-xl font-bold text-[#44382F]">Fitria </h3>
+          <p class="font-poppins text-[11px] text-[#79634F] mt-1">
+            Putri dari Bpk. Damar & Ibu. Larasati
+          </p>
+        </div>
+      </section>
+
+      <!-- Countdown -->
+      <section id="countdown" class="px-5 py-10 bg-[#E9DFD0] text-center scroll-mt-6">
+        <h2 class="font-cormorant text-2xl text-[#44382F] mb-1">Menuju Hari Bahagia</h2>
+        <p class="font-cormorant italic text-sm text-[#79634F] mb-5">Sabtu, 28 Juni 2025</p>
+        
+        <div class="grid grid-cols-4 gap-2 max-w-[320px] mx-auto mb-5">
+          <div class="bg-white rounded-xl p-2.5 shadow-sm"><span id="days" class="font-cormorant text-2xl font-bold text-[#44382F]">00</span><p class="text-[9px] uppercase text-[#79634F]">Hari</p></div>
+          <div class="bg-white rounded-xl p-2.5 shadow-sm"><span id="hours" class="font-cormorant text-2xl font-bold text-[#44382F]">00</span><p class="text-[9px] uppercase text-[#79634F]">Jam</p></div>
+          <div class="bg-white rounded-xl p-2.5 shadow-sm"><span id="minutes" class="font-cormorant text-2xl font-bold text-[#44382F]">00</span><p class="text-[9px] uppercase text-[#79634F]">Menit</p></div>
+          <div class="bg-white rounded-xl p-2.5 shadow-sm"><span id="seconds" class="font-cormorant text-2xl font-bold text-[#44382F]">00</span><p class="text-[9px] uppercase text-[#79634F]">Detik</p></div>
+        </div>
+
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The+Wedding+of+Hilalby+%26+Fitria&dates=20250628T010000Z/20250628T070000Z" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 px-4 py-2 rounded-full bg-white text-[#44382F] text-xs font-medium shadow-sm hover:bg-[#B89B7A] hover:text-white transition-colors">
+          <span class="material-symbols-outlined text-sm">event_upcoming</span>
+          <span>Simpan ke Kalender</span>
+        </a>
+      </section>
+
+      <!-- Acara -->
+      <section id="event" class="px-5 py-10 scroll-mt-6">
+        <div class="text-center mb-6">
+          <h2 class="font-cormorant text-2xl text-[#44382F]">Rangkaian Acara</h2>
+        </div>
+        <div class="space-y-4">
+          <!-- Akad -->
+          <div class="bg-white rounded-2xl border border-[#B89B7A]/30 p-5 shadow-sm">
+            <div class="flex justify-between items-center mb-3 border-b border-[#E9DFD0] pb-2">
+              <span class="px-2.5 py-0.5 bg-[#E9DFD0] text-[#44382F] font-poppins text-[10px] font-semibold uppercase rounded-full">Akad Nikah</span>
+              <span class="material-symbols-outlined text-[#B89B7A] text-base">volunteer_activism</span>
+            </div>
+            <div class="space-y-2 text-xs text-[#79634F]">
+              <p><strong>Sabtu, 28 Juni 2025</strong><br>Pukul 08.00 - 10.00 WIB</p>
+              <p><strong>Masjid Al-Ikhlas Grand Hall</strong><br>Jl. Kartika No. 12, Jakarta Selatan</p>
+            </div>
+          </div>
+          <!-- Resepsi -->
+          <div class="bg-white rounded-2xl border border-[#B89B7A]/30 p-5 shadow-sm">
+            <div class="flex justify-between items-center mb-3 border-b border-[#E9DFD0] pb-2">
+              <span class="px-2.5 py-0.5 bg-[#B89B7A] text-white font-poppins text-[10px] font-semibold uppercase rounded-full">Resepsi</span>
+              <span class="material-symbols-outlined text-[#B89B7A] text-base">restaurant</span>
+            </div>
+            <div class="space-y-2 text-xs text-[#79634F]">
+              <p><strong>Sabtu, 28 Juni 2025</strong><br>Pukul 11.00 - 14.00 WIB</p>
+              <p><strong>The Glass House Pavilion</strong><br>Ballroom Lantai 2, Jakarta Selatan</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lokasi -->
+      <section id="location" class="px-5 py-10 bg-[#F8F5EF] border-t border-[#E9DFD0] scroll-mt-6">
+        <div class="text-center mb-6">
+          <h2 class="font-cormorant text-2xl text-[#44382F]">Lokasi Acara</h2>
+        </div>
+        <div class="bg-white rounded-2xl border border-[#B89B7A]/30 overflow-hidden shadow-sm space-y-4 p-5">
+          <!-- Peta Visual Preview -->
+          <div class="relative w-full h-44 bg-[#E9DFD0] rounded-xl overflow-hidden flex items-center justify-center border border-[#B89B7A]/20">
+            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#79634F_1px,transparent_1px)] [background-size:14px_14px]"></div>
+            <div class="absolute w-48 h-48 rounded-full border border-[#B89B7A]/30 animate-pulse"></div>
+            <div class="relative z-10 flex flex-col items-center">
+              <div class="w-10 h-10 rounded-full bg-[#B89B7A] text-white flex items-center justify-center shadow-lg animate-bounce">
+                <span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+              </div>
+              <div class="bg-white px-2.5 py-0.5 rounded-full text-[10px] font-semibold text-[#44382F] shadow-sm mt-1 border border-[#B89B7A]/30">
+                The Glass House Pavilion
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="font-cormorant text-lg font-bold text-[#44382F]">The Glass House Pavilion</h4>
+            <p class="font-poppins text-xs text-[#79634F] mt-1">Jl. Kartika No. 12, Kebayoran Baru, Jakarta Selatan</p>
+          </div>
+          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 bg-[#B89B7A] hover:bg-[#a68969] text-white rounded-xl font-poppins text-xs font-semibold uppercase flex items-center justify-center space-x-1.5 shadow-sm transition-colors">
+            <span class="material-symbols-outlined text-sm">near_me</span>
+            <span>Buka di Google Maps</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Digital Gift -->
+      <section id="gift" class="px-5 py-10 bg-[#E9DFD0]/50 border-t border-[#E9DFD0] scroll-mt-6">
+        <div class="text-center mb-6">
+          <span class="material-symbols-outlined text-[#B89B7A] text-xl mb-0.5">card_giftcard</span>
+          <h2 class="font-cormorant text-2xl text-[#44382F]">Digital Gift</h2>
+          <p class="font-poppins text-xs text-[#79634F] mt-1">Doa restu Anda merupakan karunia terindah. Namun bagi yang ingin memberikan tanda kasih, dapat melalui:</p>
+        </div>
+
+        <div class="space-y-4 max-w-[360px] mx-auto">
+          <!-- BSI Card -->
+          <div class="bg-white rounded-2xl border border-[#B89B7A]/30 p-5 shadow-sm flex flex-col items-center text-center relative overflow-hidden">
+            <div class="flex items-center justify-between w-full mb-3 pb-2 border-b border-[#E9DFD0]">
+              <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 rounded-lg bg-[#00A39E] text-white flex items-center justify-center font-bold text-xs">
+                  BSI
+                </div>
+                <span class="font-poppins font-semibold text-xs text-[#44382F]">Bank Syariah Indonesia</span>
+              </div>
+              <span class="material-symbols-outlined text-[#B89B7A] text-sm">account_balance</span>
+            </div>
+            <p class="font-poppins text-xs text-[#79634F]">No. Rekening:</p>
+            <p class="font-poppins text-base font-bold text-[#44382F] tracking-wider my-1" id="bsi-num">1234 5678 90</p>
+            <p class="font-poppins text-xs text-[#79634F] mb-3">a.n. Hilalby </p>
+            <button type="button" onclick="copyText('1234567890', this)" class="px-4 py-1.5 rounded-full border border-[#B89B7A] text-[#79634F] hover:bg-[#B89B7A] hover:text-white text-xs font-medium transition-colors flex items-center space-x-1">
+              <span class="material-symbols-outlined text-xs">content_copy</span>
+              <span>Salin No. Rekening</span>
+            </button>
+          </div>
+
+          <!-- DANA Card -->
+          <div class="bg-white rounded-2xl border border-[#B89B7A]/30 p-5 shadow-sm flex flex-col items-center text-center relative overflow-hidden">
+            <div class="flex items-center justify-between w-full mb-3 pb-2 border-b border-[#E9DFD0]">
+              <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 rounded-lg bg-[#118EEA] text-white flex items-center justify-center font-bold text-[10px]">
+                  DANA
+                </div>
+                <span class="font-poppins font-semibold text-xs text-[#44382F]">E-Wallet DANA</span>
+              </div>
+              <span class="material-symbols-outlined text-[#B89B7A] text-sm">account_balance_wallet</span>
+            </div>
+            <p class="font-poppins text-xs text-[#79634F]">No. DANA:</p>
+            <p class="font-poppins text-base font-bold text-[#44382F] tracking-wider my-1" id="dana-num">0812 3456 7890</p>
+            <p class="font-poppins text-xs text-[#79634F] mb-3">a.n. Fitria </p>
+            <button type="button" onclick="copyText('081234567890', this)" class="px-4 py-1.5 rounded-full border border-[#B89B7A] text-[#79634F] hover:bg-[#B89B7A] hover:text-white text-xs font-medium transition-colors flex items-center space-x-1">
+              <span class="material-symbols-outlined text-xs">content_copy</span>
+              <span>Salin Nomor DANA</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Closing -->
+      <section id="closing" class="px-5 py-10 text-center flex flex-col items-center bg-white/60">
+        <h3 class="font-cormorant text-2xl text-[#44382F] mb-2">Terima Kasih</h3>
+        <p class="font-poppins text-xs text-[#79634F] max-w-[320px] leading-relaxed mb-6">
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir memberikan doa restu.
+        </p>
+        <p class="font-cormorant italic text-sm text-[#79634F] mb-1">Kami yang berbahagia,</p>
+        <div class="font-cormorant text-3xl text-[#B89B7A]">Hilalby & Fitria</div>
+      </section>
+
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav id="bottom-navbar" class="fixed bottom-3 inset-x-0 mx-auto z-50 flex justify-around items-center px-1.5 py-1 w-[calc(100%-2rem)] max-w-[360px] bg-white/85 backdrop-blur-md border border-[#B89B7A]/30 shadow-lg rounded-full transition-all duration-500 translate-y-24 opacity-0 pointer-events-none">
+      <a href="#couple" class="nav-item flex flex-col items-center justify-center text-[#79634F] px-2.5 py-1 rounded-full transition-all duration-200" data-section="couple">
+        <span class="material-symbols-outlined text-[16px]">favorite</span>
+        <span class="text-[8px] font-medium">Mempelai</span>
+      </a>
+      <a href="#countdown" class="nav-item flex flex-col items-center justify-center text-[#79634F] px-2.5 py-1 rounded-full transition-all duration-200" data-section="countdown">
+        <span class="material-symbols-outlined text-[16px]">schedule</span>
+        <span class="text-[8px] font-medium">Waktu</span>
+      </a>
+      <a href="#event" class="nav-item flex flex-col items-center justify-center text-[#79634F] px-2.5 py-1 rounded-full transition-all duration-200" data-section="event">
+        <span class="material-symbols-outlined text-[16px]">event</span>
+        <span class="text-[8px] font-medium">Acara</span>
+      </a>
+      <a href="#location" class="nav-item flex flex-col items-center justify-center text-[#79634F] px-2.5 py-1 rounded-full transition-all duration-200" data-section="location">
+        <span class="material-symbols-outlined text-[16px]">location_on</span>
+        <span class="text-[8px] font-medium">Lokasi</span>
+      </a>
+      <a href="#gift" class="nav-item flex flex-col items-center justify-center text-[#79634F] px-2.5 py-1 rounded-full transition-all duration-200" data-section="gift">
+        <span class="material-symbols-outlined text-[16px]">card_giftcard</span>
+        <span class="text-[8px] font-medium">Gift</span>
+      </a>
+    </nav>
+
+  </main>
+</div>
+
+<script>
+  function copyText(text, btn) {
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = btn.innerHTML;
+      btn.innerHTML = `<span class="material-symbols-outlined text-xs">check</span><span>Tersalin!</span>`;
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+      }, 2000);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const coverScreen = document.getElementById('cover-screen');
+    const btnOpen = document.getElementById('btn-open-invitation');
+    const unlockedContent = document.getElementById('unlocked-content');
+    const bottomNav = document.getElementById('bottom-navbar');
+    const navItems = document.querySelectorAll('.nav-item');
+    const sections = document.querySelectorAll('#unlocked-content section[id]');
+
+    // Diatur ke tahun 2027 (atau masa depan) agar hitung mundur berjalan normal secara real-time
+    const targetDate = new Date('2027-06-28T03:00:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        document.getElementById('days').innerText = '00';
+        document.getElementById('hours').innerText = '00';
+        document.getElementById('minutes').innerText = '00';
+        document.getElementById('seconds').innerText = '00';
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('days').innerText = String(days).padStart(2, '0');
+      document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+      document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    btnOpen.addEventListener('click', () => {
+      coverScreen.classList.add('hidden');
+
+      unlockedContent.classList.remove('hidden');
+      setTimeout(() => {
+        unlockedContent.classList.remove('opacity-0');
+        unlockedContent.classList.add('opacity-100');
+      }, 50);
+
+      bottomNav.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+      bottomNav.classList.add('translate-y-0', 'opacity-100');
+
+      // === KUNCI SEMUA INTERAKSI (STATIS) ===
+      document.body.classList.add('invitation-locked');
+      document
+        .querySelectorAll('#unlocked-content a, #unlocked-content button, #bottom-navbar a')
+        .forEach(el => {
+          el.removeAttribute('href');
+          el.removeAttribute('onclick');
+          el.removeAttribute('target');
+          el.setAttribute('tabindex', '-1');
+          el.setAttribute('aria-disabled', 'true');
+          if (el.tagName === 'BUTTON') el.disabled = true;
+        });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    function setActiveNav(activeId) {
+      navItems.forEach(item => {
+        const targetSection = item.getAttribute('data-section');
+        if (targetSection === activeId) {
+          item.classList.add('bg-[#B89B7A]', 'text-white');
+          item.classList.remove('text-[#79634F]');
+        } else {
+          item.classList.remove('bg-[#B89B7A]', 'text-white');
+          item.classList.add('text-[#79634F]');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', () => {
+      if (unlockedContent.classList.contains('hidden')) return;
+
+      let currentSection = 'couple';
+      const scrollPosition = window.scrollY + 120;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          currentSection = section.id;
+        }
+      });
+
+      if (currentSection === 'salam') currentSection = 'couple';
+      setActiveNav(currentSection);
+    });
+  });
+</script>
+</body>
+</html>
